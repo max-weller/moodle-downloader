@@ -1,4 +1,4 @@
-# Moodle Download
+# Moodle Downloader
 
 ## Origin
 This is a fork from [davidgengenbach/moodle-downloader](https://github.com/davidgengenbach/moodle-downloader) that did not work on the Moodle platform from the [Hochschule Pforzheim University](https://www.hs-pforzheim.de/) due to differences in the html-structure.
