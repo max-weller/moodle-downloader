@@ -5,11 +5,11 @@ from urllib.parse import urljoin
 def login(url, username, password):
     browser = mechanicalsoup.Browser()
     page = browser.get(url)
-    link = page.soup.select('.loginpanel a:nth-of-type(1)')[0].attrs['href']
+    link = page.soup.select('.loginpanel form:nth-of-type(1), .loginpanel a:nth-of-type(1)')[0].attrs['action']
     login_page = browser.get(link)
     print("login_page.url",login_page.url)
     print("link",link)
-    form = login_page.soup.select('form#fm1')[0]
+    form = login_page.soup.select('form#fm1, form#login')[0]
     submit_url = urljoin(login_page.url, form.attrs['action'])
     print("submit_url",submit_url)
     print("form action",form.attrs['action'])
